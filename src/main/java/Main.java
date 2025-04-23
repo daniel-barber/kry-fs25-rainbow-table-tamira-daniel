@@ -69,7 +69,7 @@ public class Main {
         return String.format("%" + length + "s", base36).replace(' ', '0');
     }
 
-    // Hash string using MD5 and returns the hex string
+    // Hash string using MD5 and returns the hex string -> MessageDigest from ChatGPT
     public static String md5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -84,6 +84,7 @@ public class Main {
         }
     }
 
+    // reduce function -> ChatGPT recommended BigInteger for this
     public static String reduce(String hash, int step) {
 
         // Convert full hash to a big integer
